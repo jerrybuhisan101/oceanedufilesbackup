@@ -1,0 +1,17 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /reference/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /reference/index.php [L]
+</IfModule>
+
+# END WordPress
+
+
+#301redirect
+RewriteEngine On
+Redirect 301 /wp-login.php?redirect_to=http%3A%2F%2Freference.ocean.edu.vn%2F eference.ocean.edu.vn/wp-login.php
